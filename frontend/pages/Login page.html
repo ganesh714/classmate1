@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - ClassmateAI</title>
+  <title>Login - ClassmateAI Demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,118 +208,24 @@
       font-size: 1rem;
     }
 
-    .auth-switch {
-      color: var(--text-secondary);
-      margin-top: 1.5rem;
-      text-align: center;
-    }
-
-    .auth-switch a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .auth-switch a:hover {
-      color: var(--accent-secondary);
-    }
-
-    .auth-switch a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent), var(--accent-secondary));
-      transition: width 0.3s ease;
-    }
-
-    .auth-switch a:hover::after {
-      width: 100%;
-    }
-
     /* Form styles */
-    .form-group {
-      margin-bottom: 1.5rem;
-      position: relative;
+    .demo-message {
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        background-color: rgba(var(--accent-rgb, 42, 140, 244), 0.1);
+        color: var(--accent);
+        border-radius: 8px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        border: 1px solid rgba(var(--accent-rgb, 42, 140, 244), 0.2);
     }
-
-    .form-label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--text);
+    .dark-mode .demo-message {
+        color: var(--accent);
+        background-color: rgba(var(--accent-rgb, 138, 143, 255), 0.1);
+        border: 1px solid rgba(var(--accent-rgb, 138, 143, 255), 0.2);
     }
-
-    .form-control {
-      width: 100%;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      font-size: 1rem;
-      color: var(--text);
-      transition: all 0.3s ease;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(138, 143, 255, 0.2);
-    }
-
-    .password-toggle {
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--text-secondary);
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .password-toggle:hover {
-      color: var(--accent);
-    }
-
-    .forgot-password {
-      display: block;
-      text-align: right;
-      margin-top: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .forgot-password:hover {
-      color: var(--accent);
-    }
-
-    .remember-me {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .remember-me input {
-      margin-right: 0.75rem;
-      width: 18px;
-      height: 18px;
-      accent-color: var(--accent);
-    }
-
-    .remember-me label {
-      color: var(--text);
-      font-size: 0.9375rem;
-    }
-
+    
     /* Button styles */
     .btn {
       display: inline-flex;
@@ -369,15 +275,7 @@
       margin-right: 0.75rem;
       font-size: 1.1rem;
     }
-
-    /* Error message */
-    .error-message {
-      color: #ff6b6b;
-      font-size: 0.875rem;
-      margin-top: 0.5rem;
-      display: none;
-    }
-
+    
     /* Theme toggle */
     .theme-toggle {
       display: flex;
@@ -421,35 +319,16 @@
 
     /* Responsive styles */
     @media (max-width: 768px) {
-      header {
-        padding: 1rem;
-      }
-      
-      .auth-card {
-        padding: 2rem 1.5rem;
-      }
-      
-      .auth-title {
-        font-size: 1.5rem;
-      }
-      
-      .logo {
-        height: 32px;
-      }
-      
-      .logo-text {
-        font-size: 1.25rem;
-      }
+      header { padding: 1rem; }
+      .auth-card { padding: 2rem 1.5rem; }
+      .auth-title { font-size: 1.5rem; }
+      .logo { height: 32px; }
+      .logo-text { font-size: 1.25rem; }
     }
 
     @media (max-width: 480px) {
-      .auth-container {
-        padding: 1rem;
-      }
-      
-      .auth-card {
-        padding: 1.5rem 1rem;
-      }
+      .auth-container { padding: 1rem; }
+      .auth-card { padding: 1.5rem 1rem; }
     }
   </style>
 </head>
@@ -457,9 +336,9 @@
   <!-- Header with logo and name -->
   <header>
     <div class="logo-container">
-  <img src="../logos/logo-light.png" alt="ClassmateAI Logo" class="logo" id="headerLogo">
-  <span class="logo-text">ClassmateAI</span>
-</div>
+      <img src="../logos/logo-light.png" alt="ClassmateAI Logo" class="logo" id="headerLogo">
+      <span class="logo-text">ClassmateAI</span>
+    </div>
     <button class="theme-toggle" id="themeToggle">
       <i class="fas fa-sun"></i>
       <i class="fas fa-moon"></i>
@@ -474,41 +353,21 @@
     <div class="auth-card">
       <div class="auth-header">
         <div class="auth-logo">
-  <img src="../logos/logo-light.png" alt="ClassmateAI Logo" id="authLogo">
-</div>
-        <h1 class="auth-title">Welcome back</h1>
-        <p class="auth-subtitle">Sign in to your account to continue</p>
+          <img src="../logos/logo-light.png" alt="ClassmateAI Logo" id="authLogo">
+        </div>
+        <h1 class="auth-title">Welcome to the Demo</h1>
+        <p class="auth-subtitle">Enter the demo environment</p>
       </div>
 
       <form id="login-form">
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        <div class="demo-message">
+          🚀 No password needed. Just click below to continue.
         </div>
-
-        <div class="form-group">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
-          <button type="button" id="togglePassword" class="password-toggle">
-            <i class="fas fa-eye"></i>
-          </button>
-          <a href="#" class="forgot-password">Forgot password?</a>
-        </div>
-
-        <div class="remember-me">
-          <input type="checkbox" id="rememberMe">
-          <label for="rememberMe">Remember me</label>
-        </div>
-
-        <div id="error-message" class="error-message"></div>
-
+        
         <button type="submit" class="btn btn-primary" id="submit-button">
-          <i class="fas fa-sign-in-alt btn-icon"></i> Sign In
+          <i class="fas fa-rocket btn-icon"></i> Enter Demo
         </button>
 
-        <div class="auth-switch">
-          Don't have an account? <a href="signup page.html">Sign up</a>
-        </div>
       </form>
     </div>
   </div>
@@ -516,46 +375,22 @@
   <script>
     // DOM elements
     const loginForm = document.getElementById('login-form');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
     const submitButton = document.getElementById('submit-button');
-    const errorMessage = document.getElementById('error-message');
-    const togglePassword = document.getElementById('togglePassword');
     const themeToggle = document.getElementById('themeToggle');
-    const serverUrl = "https://classmate1-ffw7.onrender.com"; // Update with your server URL
 
     // Redirect if already logged in
     if (localStorage.getItem('auth_token')) {
       window.location.href = "home.html";
     }
 
-    // Show error message
-    function showError(message) {
-      errorMessage.textContent = message;
-      errorMessage.style.display = 'block';
-    }
-
-    // Toggle password visibility
-    togglePassword.addEventListener('click', function() {
-      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-      passwordInput.setAttribute('type', type);
-      this.querySelector('i').classList.toggle('fa-eye');
-      this.querySelector('i').classList.toggle('fa-eye-slash');
-    });
-
     // Theme toggle functionality
-    // Check for saved theme preference or use preferred color scheme
     const currentTheme = localStorage.getItem('theme') || 
                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     
-    // Apply the current theme
     if (currentTheme === 'dark') {
       document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
     }
     
-    // Theme toggle function
     function toggleTheme() {
       if (document.body.classList.contains('dark-mode')) {
         document.body.classList.remove('dark-mode');
@@ -567,10 +402,8 @@
       updateLogos();
     }
     
-    // Add event listener to toggle button
     themeToggle.addEventListener('click', toggleTheme);
     
-    // Watch for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       const newTheme = e.matches ? 'dark' : 'light';
       localStorage.setItem('theme', newTheme);
@@ -579,82 +412,46 @@
       } else {
         document.body.classList.remove('dark-mode');
       }
+      updateLogos();
     });
 
-    // Login Form Submission
-    loginForm.addEventListener('submit', async function(e) {
+    // Login Form Submission for Demo
+    loginForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      errorMessage.style.display = 'none'; // Hide previous errors
 
-      // Show loading state
       const originalButtonHTML = submitButton.innerHTML;
       submitButton.disabled = true;
-      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin btn-icon"></i> Signing In...';
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin btn-icon"></i> Entering...';
 
-      try {
-        // Login logic
-        const email = emailInput.value;
-        const password = passwordInput.value;
-
-        const response = await fetch(serverUrl + '/api/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({ email, password })
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          // Handle specific error types
-          if (data.error_type === 'email_not_found') {
-            showError('Email not registered. Please sign up first.');
-          } else if (data.error_type === 'wrong_password') {
-            showError('Incorrect password. Please try again.');
-          } else {
-            showError(data.detail || 'Login failed');
-          }
-          return; // Stop execution if login failed
-        }
-
-        // Handle successful login
-        localStorage.setItem('auth_token', data.token);
-        if (data.user && data.user.name) {
-          localStorage.setItem('user_name', data.user.name);
-        }
+      // Simulate a quick process
+      setTimeout(() => {
+        // Set dummy data in localStorage for the demo
+        localStorage.setItem('auth_token', 'demo-mode-token-12345');
+        localStorage.setItem('user_name', 'Demo User');
+        localStorage.setItem('user_email', 'demo@example.com');
         
-        // Redirect to the protected page
+        // Redirect to the dashboard/home page
         window.location.href = 'home.html';
-
-      } catch (error) {
-        showError('Network error or server issue. Please try again.');
-        console.error('Error:', error);
-      } finally {
-        // Restore button state
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonHTML;
-      }
+      }, 500);
     });
 
-// Function to update logos based on theme
-function updateLogos() {
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  const headerLogo = document.getElementById('headerLogo');
-  const authLogo = document.getElementById('authLogo');
-  
-  if (isDarkMode) {
-    headerLogo.src = "../logos/logo-dark.png";
-    authLogo.src = "../logos/logo-dark.png";
-  } else {
-    headerLogo.src = "../logos/logo-light.png";
-    authLogo.src = "../logos/logo-light.png";
-  }
-}
+    // Function to update logos based on theme
+    function updateLogos() {
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      const headerLogo = document.getElementById('headerLogo');
+      const authLogo = document.getElementById('authLogo');
+      
+      if (isDarkMode) {
+        headerLogo.src = "../logos/logo-dark.png";
+        authLogo.src = "../logos/logo-dark.png";
+      } else {
+        headerLogo.src = "../logos/logo-light.png";
+        authLogo.src = "../logos/logo-light.png";
+      }
+    }
 
-// Call this function initially and whenever theme changes
-updateLogos();
+    // Initial call to set correct logos
+    updateLogos();
 
   </script>
 </body>
