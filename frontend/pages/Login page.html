@@ -378,10 +378,6 @@
     const submitButton = document.getElementById('submit-button');
     const themeToggle = document.getElementById('themeToggle');
 
-    // Redirect if already logged in
-    if (localStorage.getItem('auth_token')) {
-      window.location.href = "home.html";
-    }
 
     // Theme toggle functionality
     const currentTheme = localStorage.getItem('theme') || 
