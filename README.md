@@ -189,6 +189,6 @@ Contributions are what make the open-source community such an amazing place to l
   * Siva Ganesh Vemula     - [LinkedIn](https://www.linkedin.com/in/siva-ganesh-vemula/)
   * Naga Veeranna          - [LinkedIn](https://www.linkedin.com/in/naga-veeranna-97a133286/)
 
-**Project Link:** [https://github.com/ganesh714/classmate](https://www.google.com/search?q=https://github.com/ganesh714/classmate1)
+**Project Link:** [https://github.com/ganesh714/classmate1](https://www.google.com/search?q=https://github.com/ganesh714/classmate1)
 
 
