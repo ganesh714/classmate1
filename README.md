@@ -5,7 +5,7 @@
   <br>
   <h3>Your Personal AI Learning Assistant</h3>
   <p>
-    <a href="https://ganesh714.github.io/classmate/"><strong>View Live Demo »</strong></a>
+    <a href="https://ganesh714.github.io/classmate1/"><strong>View Live Demo »</strong></a>
     <br />
     <br />
     <a href="#features">Features</a> ·
@@ -179,5 +179,16 @@ Contributions are what make the open-source community such an amazing place to l
 5.  Open a Pull Request
 
 -----
-# ClassMate
-link -- https://ganesh714.github.io/classmate1/
+
+## 📞 Contact
+
+**Developers:**
+
+  * Venkata Ganesh         - [LinkedIn](https://www.linkedin.com/in/venkata-ganesh-934072291/)
+  * Sriram Chodabattula    - [LinkedIn](http://www.linkedin.com/in/sriram-chodabattula-09b08a174)
+  * Siva Ganesh Vemula     - [LinkedIn](https://www.linkedin.com/in/siva-ganesh-vemula/)
+  * Naga Veeranna          - [LinkedIn](https://www.linkedin.com/in/naga-veeranna-97a133286/)
+
+**Project Link:** [https://github.com/ganesh714/classmate](https://www.google.com/search?q=https://github.com/ganesh714/classmate1)
+
+
