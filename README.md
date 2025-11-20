@@ -55,5 +55,27 @@ Unlike generic study tools, Classmate utilizes **Google's Gemini AI** to not jus
 * **Profile Management**: Update user details, avatars, and passwords.
 
 ---
+
+## 🛠️ Tech Stack
+
+### Frontend
+* **HTML5 / CSS3**: Modern, responsive design with CSS Variables for theming.
+* **JavaScript (Vanilla)**: Core logic for UI interactions and API integration.
+* **Libraries**: 
+    * `Chart.js` (Dashboard analytics)
+    * `Marked.js` (Markdown rendering)
+    * `Highlight.js` (Code syntax highlighting)
+    * `FontAwesome` (Icons)
+
+### Backend
+* **Framework**: **FastAPI** (Python) for high-performance async API endpoints.
+* **Database**: **MongoDB** (using `Motor` for async Python drivers).
+* **Authentication**: `Passlib` (Bcrypt hashing) and `Python-Jose` (JWT tokens).
+* **AI Integration**: `google-genai` SDK.
+
+### Deployment
+* **Configuration**: Ready for deployment on platforms like **Render** (configuration included in `backend/render.yaml`).
+
+---
 # ClassMate
 link -- https://ganesh714.github.io/classmate1/
