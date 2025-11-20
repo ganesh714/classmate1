@@ -142,5 +142,30 @@ Since the frontend is static HTML/JS:
 2.  **Note**: You may need to update the `API_URL` or `serverUrl` variable in the `<script>` tags of the HTML files if your backend runs on a port other than the hardcoded production URL (defaults to `http://localhost:8000` for local dev, or update it to point to your local instance).
 
 -----
+
+## 📂 Project Structure
+
+```
+classmate/
+├── backend/
+│   ├── app/
+│   │   ├── api/            # API Routes (Auth, Chat, Notes, Tasks)
+│   │   └── main.py         # FastAPI Entry point
+│   ├── requirements.txt    # Python dependencies
+│   └── render.yaml         # Deployment config
+└── frontend/
+    ├── css/                # Global and Page-specific styles
+    ├── js/                 # Frontend logic assets
+    ├── logos/              # Project branding
+    └── pages/              # HTML Views
+        ├── home.html       # Main app shell (Sidebar + Iframe)
+        ├── dashboard.html  # Analytics view
+        ├── chatbot.html    # AI Interface
+        ├── notes.html      # Notes App
+        ├── taskManager.html# Smart Task Generator
+        └── ...
+```
+
+-----
 # ClassMate
 link -- https://ganesh714.github.io/classmate1/
