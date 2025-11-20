@@ -77,5 +77,70 @@ Unlike generic study tools, Classmate utilizes **Google's Gemini AI** to not jus
 * **Configuration**: Ready for deployment on platforms like **Render** (configuration included in `backend/render.yaml`).
 
 ---
+
+## 🚀 Installation & Local Setup
+
+Follow these steps to get a local copy up and running.
+
+### Prerequisites
+* Python 3.9+
+* MongoDB (Local or Atlas URI)
+* Google Gemini API Key
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ganesh714/classmate.git
+cd classmate
+````
+
+### 2\. Backend Setup
+
+Navigate to the backend directory and set up the environment.
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3\. Configure Environment Variables
+
+Create a `.env` file in the `backend/` directory:
+
+```env
+# backend/.env
+MONGO_URI=your_mongodb_connection_string
+SECRET_KEY=your_secret_jwt_key
+GEMINI_API_KEY1=your_primary_gemini_api_key
+GEMINI_API_KEY2=your_backup_gemini_api_key_optional
+```
+
+### 4\. Run the Backend Server
+
+```bash
+# Inside the backend/ directory
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+The API will be available at `http://localhost:8000`.
+
+### 5\. Frontend Setup
+
+Since the frontend is static HTML/JS:
+
+1.  Open `frontend/pages/Login page.html` directly in your browser.
+2.  **Note**: You may need to update the `API_URL` or `serverUrl` variable in the `<script>` tags of the HTML files if your backend runs on a port other than the hardcoded production URL (defaults to `http://localhost:8000` for local dev, or update it to point to your local instance).
+
+-----
 # ClassMate
 link -- https://ganesh714.github.io/classmate1/
